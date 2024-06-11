@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="topo">
+        <div id="drop_zone">
+            <label for="fileInput" id="fileInputLabel">Arraste o arquivo .csv aqui ou clique para selecionar</label>
+            <input type="file" id="fileInput" accept=".csv">
+        </div>
+        <div id="drop_zone2">
+            <label for="fileInput2" id="fileInputLabel2">Arraste o segundo arquivo .csv aqui ou clique para selecionar</label>
+            <input type="file" id="fileInput2" accept=".csv">
+        </div>
+        <button id="scrollToggleButton">Iniciar/Parar Scroll</button>
+        <div id="clock-container">
+            <div id="clock-background"></div>
+            <span id="clock"></span>
+        </div>
+        <div id="image-container">
+            <img src="preview00.png" alt="Descrição da imagem">
+        </div>
+    </div>
+    <div id="div0" class="row header-row">
+        <div class="cell column-name column-data">Data/Horário</div>
+        <div class="cell column-name column-vara">Vara/Turma</div>
+        <div class="cell column-name column-comarca">Comarca/Foro</div>
+        <div class="cell column-name column-local">Local</div>
+        <div class="cell column-name column-tipo">Tipo</div>
+        <div class="cell column-name column-cliente">Cliente</div>
+        <div class="cell column-name column-contrario">Contrário</div>
+        <div class="cell column-name column-cnj">CNJ</div>
+        <div class="cell column-name column-envolvido">Envolvido</div>
+    </div>
+    <div id="empty-space"></div>
+    <div id="dataDisplay" class="data-display"></div>
+
+    <div id="div9" class="row header-row">
+        <div class="cell column-name column-prazo">Prazo</div>
+        <div class="cell column-name column-cliente">Cliente</div>
+        <div class="cell column-name column-contrario">Contrário</div>
+        <div class="cell column-name column-cnj">Número CNJ</div>
+        <div class="cell column-name column-responsavel">Responsável</div>
+    </div>
+    <div id="empty-space2"></div>
+    <div id="dataDisplay2" class="data-display"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
