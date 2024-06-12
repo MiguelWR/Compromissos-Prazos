@@ -289,7 +289,7 @@ body {
     color: black;
 }
 #div9 {
-    background-color: rgb(134, 188, 221);
+    background-color: rgb(105, 195, 100);
     width: 95%;
     display: flex;
     flex-wrap: wrap;
@@ -302,10 +302,34 @@ body {
     top: 120px; 
     z-index: 1;
     color: #000;
+    border: 2px solid white;
 }
 
 #div9 label {
     display: block;
     margin-bottom: 10px;
     font-size: 10px;
+}
+.row2 {
+    display: flex;
+    justify-content: space-between; 
+    background-color: rgb(174, 252, 154); /* Cor diferente para as linhas do segundo arquivo */
+    padding: 10px;
+    width: 95%; 
+    margin: 10px auto;
+    box-sizing: border-box;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.row2 p {
+    border-bottom: 1px solid #ccc;
+    padding: 5px 10px;
+    margin: 0;
+    flex: 1 1 45%; 
+    box-sizing: border-box;
+}
+
+.row2 p:nth-child(odd) {
+    background-color: #f9f9f9;
 }
