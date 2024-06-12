@@ -16,7 +16,7 @@ function handleFileSelect(event) {
                 complete: function(results) {
                     const jsonData = results.data;
                     console.log(jsonData); // Exibe os dados do CSV no console para verificação
-                    exibirDados(jsonData, 'dataDisplay'); // Insira aqui o código para inserir os dados nas divs corretas
+                    exibirDados(jsonData, 'dataDisplay', 'row'); // Insira aqui o código para inserir os dados nas divs corretas
                     esconderDropZone('drop_zone'); // Esconde a drop_zone após adicionar o arquivo
                 }
             });
@@ -37,7 +37,7 @@ function handleFileSelect2(event) {
                 complete: function(results) {
                     const jsonData = results.data;
                     console.log(jsonData); // Exibe os dados do CSV no console para verificação
-                    exibirDados(jsonData, 'dataDisplay2'); // Insira aqui o código para inserir os dados nas divs corretas
+                    exibirDados(jsonData, 'dataDisplay2', 'row2'); // Insira aqui o código para inserir os dados nas divs corretas
                     esconderDropZone('drop_zone2'); // Esconde a drop_zone após adicionar o arquivo
                 }
             });
@@ -59,7 +59,11 @@ function exibirDados(jsonData, containerId) {
         const row = jsonData[i];
         if (Object.values(row).some(value => value.trim() !== '')) {
             const rowDiv = document.createElement('div');
-            rowDiv.classList.add('row');
+            if (containerId === 'dataDisplay2') {
+                rowDiv.classList.add('row2');
+            } else {
+                rowDiv.classList.add('row');
+            }
 
             Object.keys(row).forEach(key => {
                 if (key !== 'Executante') { // Não mostra a coluna Executante
